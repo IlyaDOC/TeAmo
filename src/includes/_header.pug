@@ -1,0 +1,57 @@
+block header
+    header#header.header
+        .container
+            .header__inner
+                .header__logo
+                    include ../assets/images/logo.svg
+                .header__menu-toggler
+                    .line
+                    .line
+                    .line
+                .header__nav
+                    nav
+                        ul
+                            li
+                                a(href='javascript:void(0)') УЧАСТНИЦЫ
+                            li
+                                a(href='javascript:void(0)') МУЗЫКА
+                            li
+                                a(href='javascript:void(0)') ВИДЕО
+                            li
+                                a(href='javascript:void(0)').dropdown УСЛУГИ
+                                .dropdown__items
+                                    ul
+                                        li
+                                            a(href='javascript:void(0)') кОНЦЕРТЫ
+                                        li
+                                            a(href='javascript:void(0)') сПЕКТАКЛИ
+                                        li
+                                            a(href='javascript:void(0)') мЕРОПРИЯТИЯ
+                                        li
+                                            a(href='javascript:void(0)') рЕЖИССУРА
+                            li
+                                a(href='javascript:void(0)') СОБЫТИЯ
+                            li
+                                a(href='javascript:void(0)') контакты
+                .header__socials
+                    noindex
+                        a(href='javascript:void(0)' rel='nofollow').header__socials-item
+                            include ../assets/images/icon_telegram.svg
+                    noindex
+                        a(href='javascript:void(0)' rel='nofollow').header__socials-item
+                            include ../assets/images/icon_vk.svg
+                    noindex
+                        a(href='javascript:void(0)' rel='nofollow').header__socials-item
+                            include ../assets/images/icon_youtube.svg
+                    a(href='mailto:teamoband@yandex.ru' rel='nofollow').header__socials-item
+                        include ../assets/images/icon_mail.svg
+                    a(href='tel:79265719396').header__socials-item.header__socials-item--hide
+                        include ../assets/images/icon_phone-pink.svg
+        .header__menu-js
+            .header__menu-js-top
+                .header__close
+                    include ../assets/images/icon_close.svg
+            .header__menu-js-nav
+            .header__menu-js-socials
+
+

@@ -1,0 +1,115 @@
+.main {
+  height: 600px;
+
+  @include breakpoint(lg) {
+    height: 778px;
+  }
+
+  @include breakpoint(xl) {
+    height: 1119px;
+  }
+}
+
+.about {
+  &__inner {
+    position: relative;
+    height: 670px;
+    padding: 50px 0;
+
+    @include breakpoint(lg) {
+      padding: 100px 0;
+      height: 820px;
+    }
+
+    @include breakpoint(xl) {
+      height: 1298px;
+      padding: 402px 0;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(lg) {
+      gap: 40px;
+      @include columCountMaxWidth(6);
+    }
+
+    @include breakpoint(xl) {
+      @include columnXlWidth(4);
+      gap: 50px;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 16px;
+
+      @include breakpoint(lg) {
+        font-size: 40px;
+      }
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 110%;
+
+      @include breakpoint(lg) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-position: right;
+
+      @include breakpoint(lg) {
+        object-position: bottom;
+      }
+    }
+  }
+}
+
+.participants {
+  padding: 50px 0;
+
+  .main-slider.swiper {
+    margin-bottom: 30px;
+
+    .swiper-slide-image {
+      //display: none;
+    }
+
+    .swiper-slide-text {
+      display: grid;
+      gap: 14px;
+
+      p {
+        &:first-child {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          font-size: 14px;
+          line-height: 110%; /* 15.4px */
+        }
+      }
+    }
+  }
+
+  .thumbs-slider.swiper {
+    .swiper-slide {
+      width: 188px;
+      height: 278px;
+    }
+  }
+}

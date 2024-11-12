@@ -1,0 +1,207 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: .4s;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+body b {
+  font-weight: 700;
+  color: inherit;
+}
+
+body.compensate-for-scrollbar {
+  overflow: visible!important;
+  padding: 0!important;
+}
+
+::-webkit-scrollbar {
+  //width: 1px;
+  //border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  //border-radius: 10px;
+  //background: transparent;
+  //width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  //background: $prime;
+  //border-radius: 10px;
+  //width: 10px;
+}
+
+//* {
+//  scrollbar-width: thin;
+//  scrollbar-color: $prime transparent;
+//}
+
+
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+}
+
+
+input:focus,
+input:focus-visible,
+input:focus::after,
+input:focus-visible::after {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+main {
+  min-height: calc(max(calc(100vh - 614px), 350px));
+  overflow: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+#page {
+  position: relative;
+  min-width: 360px;
+  min-height: 100%;
+  max-width: 100%;
+  @include flexColumn;
+}
+
+#page::before {
+  content: '';
+}
+
+section {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/////////////////////
+/// INPUTS
+/////////////////////
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"], {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none !important;
+  //border-radius: 0;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input:focus,
+input:focus-visible,
+input:focus::after,
+input:focus-visible::after {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input {
+  outline: none;
+  border: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Убирает стандартный стиль в Firefox */
+}
+
+
+
+/////////////////////
+/// BUTTONS
+/////////////////////
+
+
+
+/////////////////////
+/// LINKS
+/////////////////////
+a {
+  display: inline-block;
+}
+
+
+/////////////////////
+/// ICONS
+/////////////////////
+
+
+/////////////////////
+/// OTHERS
+/////////////////////
+
+section + section {
+
+}
+
+/////////////////////
+/// CARDS & CATALOG
+/////////////////////
+
+
+/////////////////////
+/// TYPOGRAPHY
+/////////////////////
+
+
+
+/////////////////////
+/// SWIPER SLIDER
+/////////////////////
+
+
