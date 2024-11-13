@@ -36,7 +36,7 @@ $(document).ready(function() {
         spaceBetween: 10,
         breakpoints: {
             1200: {
-                slidesPerView: 4,
+                slidesPerView: 'auto',
                 spaceBetween: 14,
             }
         }
@@ -47,5 +47,6 @@ $(document).ready(function() {
         thumbs: {
             swiper: participantsThumbsSlider
         },
+
     })
 });
