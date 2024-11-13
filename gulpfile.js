@@ -46,7 +46,8 @@ const path = {
         css:    distPath + "assets/css/",
         img:    distPath + "assets/images/",
         svg:    distPath + "assets/icons/",
-        fonts:  distPath + "assets/fonts/"
+        fonts:  distPath + "assets/fonts/",
+        audio: distPath + "assets/audio/"
     },
     src: {
         pughtml:   srcPath + "**/*.pug",
@@ -56,7 +57,8 @@ const path = {
         css:    srcPath + "assets/scss/**/*.css",
         img:    srcPath + "assets/images/**/*.{mp4,cur,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         svg:    srcPath + "assets/icons/*.svg",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        audio:  srcPath + "assets/audio/**/*.{mp3,wav,ogg}"
     },
     watch: {
         pughtml:   srcPath + "**/*.pug",
@@ -66,7 +68,8 @@ const path = {
         css:    srcPath + "assets/scss/**/*.css",
         img:    srcPath + "assets/images/**/*.{mp4,cur,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         svg:    srcPath + "assets/icons/*.svg",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        audio:  srcPath + "assets/audio/**/*.{mp3,wav,ogg}"
     },
     clean: "./" + distPath
 }
@@ -356,6 +359,15 @@ function fonts(cb) {
 
     cb();
 }
+function audio(cb) {
+    return src(path.src.audio)
+        .pipe(dest(path.build.audio))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+
 
 function clean(cb) {
     return del(path.clean);
@@ -372,9 +384,10 @@ function watchFiles() {
     gulp.watch([path.watch.img], imgWatch);
     gulp.watch([path.watch.svg], svg);
     gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.audio], audio);
 }
 
-const build = gulp.series(clean, gulp.parallel(pughtml, html, img, svg, scss, css, js, jsPlugins, fonts));
+const build = gulp.series(clean, gulp.parallel(pughtml, html, img, svg, scss, css, js, jsPlugins, fonts, audio));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 /* Exports Tasks */
@@ -387,6 +400,7 @@ exports.js = jsPlugins;
 exports.img = img;
 exports.svg = svg;
 exports.fonts = fonts;
+exports.audio = audio;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;

@@ -1,0 +1,73 @@
+.actions__equalizer {
+  @include flexAlignCenter;
+  gap: 2px;
+
+  &.animate .line {
+    animation-name: go-up-down;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: $pink;
+  }
+
+  .line {
+    width: 2px;
+    background-color: $gray;
+    border-radius: 2px;
+  }
+}
+
+@keyframes go-up-down {
+  0% {
+    height: 3px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+.line-1 {
+  animation-delay: .1s;
+  height: 5px;
+}
+
+.line-2 {
+  animation-delay: .2s;
+  height: 9px;
+}
+
+.line-3 {
+  animation-delay: .3s;
+  height: 15px;
+}
+
+.line-4 {
+  animation-delay: .2s;
+  height: 9px;
+}
+
+.line-5 {
+  animation-delay: .1s;
+  height: 5px;
+}
+
+.line-6 {
+  animation-delay: .2s;
+  height: 9px;
+}
+
+.line-7 {
+  animation-delay: .3s;
+  height: 15px;
+}
+
+.line-8 {
+  animation-delay: .2s;
+  height: 9px;
+}
+
+.line-9 {
+  animation-delay: .1s;
+  height: 5px;
+}

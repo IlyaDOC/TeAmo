@@ -58,3 +58,52 @@ block main
                             +img('participant-3.jpg')
                         .swiper-slide(data-src='assets/images/participant-main-4.jpg')
                             +img('participant-4.jpg')
+
+    section.playlist
+        .playlist__image
+            +img('playlist-image.jpg')
+        .container
+            .playlist__inner
+                .playlist__title Play List
+                .playlist__items
+                    -
+                        var songNames = [
+                            {name: 'Медведица'},
+                            {name: 'Все зависит только от Тебя'},
+                            {name: 'Снежинка'},
+                            {name: 'Журавлик'},
+                            {name: 'Мама'},
+                            {name: 'Человек придумал песню'},
+                            {name: 'Хорошие девчата'},
+                        ]
+                    each songName in songNames
+                        .playlist__item
+                            .playlist__item-name= songName.name
+                            .playlist__item-content
+                                audio(src='assets/audio/I_Got_Love_feat_Рем_Дигга_MiyaGi_&_Эндшпиль.mp3')
+                                .content__actions
+                                    .actions__button
+                                        .play-action
+                                            include assets/images/icon_play.svg
+                                        .pause-action
+                                            include assets/images/icon_pause.svg
+                                    include components/_equalizer
+
+    section.videos
+        .container
+            .videos__inner
+                .videos__title Видео
+                .videos__items
+                    .videos__item
+                        video(src='assets/images/demo.mp4' controls poster='assets/images/video-cover-1.jpg')
+                    .videos__item
+                        video(src='assets/images/demo.mp4' controls poster='assets/images/video-cover-2.jpg')
+                    .videos__item
+                        video(src='assets/images/demo.mp4' controls poster='assets/images/video-cover-3.png')
+                    .videos__item
+                        video(src='assets/images/demo.mp4' controls poster='assets/images/video-cover-4.jpg')
+                a(href='javascript:void(0)') Все видео
+
+
+
+
