@@ -34,6 +34,12 @@ $(document).ready(function() {
     const participantsThumbsSlider = new Swiper('.participants .thumbs-slider.swiper', {
         slidesPerView: 1.5,
         spaceBetween: 10,
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 14,
+            }
+        }
     });
 
     const participantsMainSlider = new Swiper('.participants .main-slider.swiper', {
