@@ -102,8 +102,66 @@ block main
                         video(src='assets/images/demo.mp4' controls poster='assets/images/video-cover-3.png')
                     .videos__item
                         video(src='assets/images/demo.mp4' controls poster='assets/images/video-cover-4.jpg')
-                a(href='javascript:void(0)') Все видео
+                a(href='javascript:void(0)').btn Все видео
 
+    section.services
+        .container
+            .services__inner
+                .services__title Услуги
+                .services__content
+                    .services__items
+                        .service__item
+                            .service__item-title Организация концерта
+                            .service__item-details
+                                a(href='javascript:void(0)').details__item Сольный концерт группы “TeAmo”
+                                a(href='javascript:void(0)').details__item Концерт группы с участием пианиста-виртуоза
+                                a(href='javascript:void(0)').details__item Концерт под аккомпанимент музыкального бэнда
+                                a(href='javascript:void(0)').details__item Концерт группы в сопровождении симфонического оркестра
+                                a(href='javascript:void(0)').details__item Концерт с полным техническим обеспечением мероприятия
+
+                        .service__item
+                            .service__item-title Авторский спектакль
+                            .service__item-details
+                                a(href='javascript:void(0)').details__item Сольный концерт группы “TeAmo”
+                        .service__item
+                            .service__item-title Корпоративные и частные мероприятия
+                            .service__item-details
+                                a(href='javascript:void(0)').details__item Сольный концерт группы “TeAmo”
+                        .service__item
+                            .service__item-title Организация и режиссура мероприятий под ключ
+                            .service__item-details
+                                a(href='javascript:void(0)').details__item Сольный концерт группы “TeAmo”
+                    .services__content-image
+                        +img('services-image.jpg')
+
+    section.events
+        .container
+            .events__inner
+                .events__item
+                    .events__item-main
+                        .events__item-name “Однажды мы встретились”
+                        .events__item-date 21 октября 2024
+                        .events__item-about Музыкальный спектакль об истории настоящей любви в трех действиях
+                        .events__item-place Концертный зал “Зарядье”
+                    .events__item-image
+                        +img('events-image.jpg')
+                a('javascript:void(0)').btn Все события
+
+    section.gallery
+        .gallery__inner
+            .gallery__title Галерея TeAmo
+            .gallery__slider.swiper
+                .swiper-wrapper
+                    .swiper-slide(data-fancybox data-src='assets/images/gallery-slide-1.jpg')
+                        +img('gallery-slide-1.jpg')
+                    .swiper-slide(data-fancybox data-src='assets/images/gallery-slide-2.jpg')
+                        +img('gallery-slide-2.jpg')
+                    .swiper-slide(data-fancybox data-src='assets/images/gallery-slide-3.jpg')
+                        +img('gallery-slide-3.jpg')
+                    .swiper-slide(data-fancybox data-src='assets/images/gallery-slide-4.jpg')
+                        +img('gallery-slide-4.jpg')
+            .gallery__image
+                +img('gallery-image.jpg')
 
 
 

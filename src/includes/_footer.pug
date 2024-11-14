@@ -2,15 +2,32 @@ block footer
     footer#footer.footer
         .container
             .footer__inner
+                .footer__title Контакты
+                .footer__details
+                    p Организация концертов и творчекие предложения
+                    a(href='tel:79265719396') +7 (926) 571-93-96
+                    a(href='mailto:teamoband@yandex.ru') teamoband@yandex.ru
+                .footer__socials
+                    noindex
+                        a(href='javascript:void(0)' rel='nofollow').footer__socials-item
+                            include ../assets/images/icon_telegram.svg
+                    noindex
+                        a(href='javascript:void(0)' rel='nofollow').footer__socials-item
+                            include ../assets/images/icon_vk.svg
+                    noindex
+                        a(href='javascript:void(0)' rel='nofollow').footer__socials-item
+                            include ../assets/images/icon_youtube.svg
+                    a(href='tel:79265719396').footer__socials-item
+                        include ../assets/images/icon_phone.svg
 
 
 
 
-                //.footer__bottom
-                //    .footer__policy
-                //        a(href="policy.html").footer__title.link.link--white-opacity Политика конфиденциальности
-                //
-                //    .footer__devs
-                //        a(href="https://di-project.studio/") Разработка сайта:
-                //        span  Di-Project.Studio
-                //    .footer__company
+                .footer__bottom
+                    .footer__policy
+                        a(href="policy.html").footer__rights Все права защищены. © TeAmo, 2019-<span></span>
+
+                    //.footer__devs
+                    //    a(href="https://di-project.studio/") Разработка сайта:
+                    //    span  Di-Project.Studio
+                    .footer__company Дизайн сайта студия 4 Чайки

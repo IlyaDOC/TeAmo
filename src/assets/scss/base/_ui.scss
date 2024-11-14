@@ -166,7 +166,46 @@ input[type="number"] {
 /// BUTTONS
 /////////////////////
 
+.btn {
+  border-radius: 38px;
+  background: $pink;
+  color: $white;
+  font-weight: 700;
+  line-height: 110%; /* 17.6px */
+  @include flexCenterCenter;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
 
+  &:hover:before {
+    animation: shine 2s linear;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    transform: rotate(-29.073deg);
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.5);
+    //background: #fd5189;
+    filter: blur(2.5px);
+    left: -100px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100px; /* Начальная позиция блика (левая сторона кнопки) */
+  }
+  20% {
+    left: 100%; /* Позиция блика в конце (правая сторона кнопки) */
+  }
+  100% {
+    left: 150%; /* Завершение анимации */
+  }
+}
 
 /////////////////////
 /// LINKS

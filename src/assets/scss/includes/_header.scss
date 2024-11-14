@@ -138,8 +138,10 @@
     }
 
     &-item {
-
+      width: 30px;
+      height: 30px;
       svg {
+
         path {
           transition: $transition;
         }
@@ -147,12 +149,6 @@
         &:hover path:first-child{
           fill: $pink;
         }
-      }
-    }
-
-    &-item--hide {
-      @include breakpoint(lg) {
-        display: none;
       }
     }
   }
@@ -222,6 +218,12 @@
 
         svg path {
           &:first-child {
+            fill: $pink;
+          }
+        }
+
+        &.header__socials-item--phone {
+          svg path {
             fill: $pink;
           }
         }
