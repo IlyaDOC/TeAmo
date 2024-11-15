@@ -1,10 +1,10 @@
 .header {
   background: transparent;
   padding: 11px 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 2;
   width: 100%;
   transition: $transition;
 
@@ -141,12 +141,17 @@
       width: 30px;
       height: 30px;
       svg {
-
         path {
           transition: $transition;
         }
 
         &:hover path:first-child{
+          fill: $pink;
+        }
+      }
+
+      &:last-child {
+        svg path:hover {
           fill: $pink;
         }
       }
@@ -166,6 +171,8 @@
   padding: 11px 20px;
   transition: .4s ease-in-out;
   transform: translateX(-100%);
+  overflow-y: auto;
+  z-index: 15;
 
   &.opened {
     transform: translateX(0);
@@ -215,6 +222,9 @@
       &-item {
         width: 45px;
         height: 45px;
+        a {
+          display: block;
+        }
 
         svg path {
           &:first-child {
@@ -222,11 +232,12 @@
           }
         }
 
-        &.header__socials-item--phone {
+        &:last-child {
           svg path {
             fill: $pink;
           }
         }
+
       }
     }
 

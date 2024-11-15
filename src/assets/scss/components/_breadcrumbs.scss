@@ -1,5 +1,13 @@
 .breadcrumbs {
-  padding-top: 20px;
+  padding: 16px 0;
+
+  @include breakpoint(lg) {
+    padding: 16px 0 20px;
+  }
+
+  @include breakpoint(xl) {
+    padding: 60px 0 20px;
+  }
 }
 
 .breadcrumbs a {
@@ -9,7 +17,7 @@
 .breadcrumbs-wrapper {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 14px;
   overflow: auto;
 }
 
@@ -19,6 +27,11 @@
   font-style: normal;
   position: relative;
   white-space: nowrap;
+  font-size: 14px;
+
+  @include breakpoint(lg) {
+    font-size: 16px;
+  }
 
   &:first-child {
     overflow: unset;
@@ -29,9 +42,8 @@
       position: absolute;
       display: block;
       content: '/';
-      top: calc(50% - 10px);
-      right: -19px;
-      font-size: 16px;
+      right: -10px;
+      font-size: 14px;
     }
   }
 

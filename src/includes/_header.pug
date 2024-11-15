@@ -2,7 +2,7 @@ block header
     header#header.header
         .container
             .header__inner
-                .header__logo
+                a(href='/').header__logo
                     include ../assets/images/logo.svg
                 .header__menu-toggler
                     .line
@@ -22,7 +22,7 @@ block header
                                 .dropdown__items
                                     ul
                                         li
-                                            a(href='javascript:void(0)') кОНЦЕРТЫ
+                                            a(href='service.html') кОНЦЕРТЫ
                                         li
                                             a(href='javascript:void(0)') сПЕКТАКЛИ
                                         li
@@ -30,28 +30,33 @@ block header
                                         li
                                             a(href='javascript:void(0)') рЕЖИССУРА
                             li
-                                a(href='javascript:void(0)') СОБЫТИЯ
+                                a(href='events.html') СОБЫТИЯ
                             li
                                 a(href='javascript:void(0)') контакты
                 .header__socials
-                    noindex
-                        a(href='javascript:void(0)' rel='nofollow').header__socials-item
-                            include ../assets/images/icon_telegram.svg
-                    noindex
-                        a(href='javascript:void(0)' rel='nofollow').header__socials-item
-                            include ../assets/images/icon_vk.svg
-                    noindex
-                        a(href='javascript:void(0)' rel='nofollow').header__socials-item
-                            include ../assets/images/icon_youtube.svg
-                    a(href='mailto:teamoband@yandex.ru' rel='nofollow').header__socials-item
-                        include ../assets/images/icon_mail.svg
-                    a(href='tel:79265719396').header__socials-item.header__socials-item--phone
-                        include ../assets/images/icon_phone.svg
-        .header__menu-js
-            .header__menu-js-top
-                .header__close
-                    include ../assets/images/icon_close.svg
-            .header__menu-js-nav
-            .header__menu-js-socials
+                    .header__socials-item
+                        noindex
+                            a(href='javascript:void(0)' rel='nofollow')
+                                include ../assets/images/icon_telegram.svg
+                    .header__socials-item
+                        noindex
+                            a(href='javascript:void(0)' rel='nofollow')
+                                include ../assets/images/icon_vk.svg
+                    .header__socials-item
+                        noindex
+                            a(href='javascript:void(0)' rel='nofollow')
+                                include ../assets/images/icon_youtube.svg
+                    .header__socials-item
+                        a(href='mailto:teamoband@yandex.ru' rel='nofollow')
+                            include ../assets/images/icon_mail.svg
+                    .header__socials-item
+                        a(href='tel:79265719396')
+                            include ../assets/images/icon_phone.svg
+    .header__menu-js
+        .header__menu-js-top
+            .header__close
+                include ../assets/images/icon_close.svg
+        .header__menu-js-nav
+        .header__menu-js-socials
 
 

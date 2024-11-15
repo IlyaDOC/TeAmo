@@ -31,6 +31,7 @@ $(document).ready(function() {
             1920: {
                 slidesPerView: 3,
                 spaceBetween: 14,
+                centeredSlides: false
             }
         }
     });

@@ -62,7 +62,6 @@ input[type="button"],
 input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  border-radius: 0;
 }
 
 
@@ -158,6 +157,20 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield; /* Убирает стандартный стиль в Firefox */
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid $gray-secondary;
+  padding: 16px 14px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+
+  &::placeholder {
+    color: $gray-secondary;
+    font-size: 14px;
+  }
 }
 
 

@@ -1,0 +1,44 @@
+---
+title: 'Страница | Организация концерта'
+bodyClass: service-page
+//yandexMap: true
+---
+
+extends includes/_page
+include components/_breadcrumbs
+block main
+    +breadcrumbs('', 'Услуги', 'Организация концерта')
+    section.service-page
+        .container
+            .service-page__inner
+                h1 Организация концерта
+                .service-page__filter
+                    a(href='javascript:void(0)' data-type='concerts').service-page__filter-item Концерты
+                    a(href='javascript:void(0)' data-type='performances').service-page__filter-item Спектакли
+                    a(href='javascript:void(0)' data-type='events').service-page__filter-item Мероприятия
+                    a(href='javascript:void(0)' data-type='directing').service-page__filter-item Режиссура
+                    a(href='javascript:void(0)' data-type='optional').service-page__filter-item Ваш формат
+
+                .service-page__items
+                    -
+                        var serviceItems = [
+                            {name: 'Сольный концерт группы “TeAmo”'},
+                            {name: 'Концерт группы с участием пианиста-виртуоза'},
+                            {name: 'Концерт под аккомпанимент музыкального бэнда'},
+                            {name: 'Концерт с полным техническим обеспечением мероприятия'},
+                        ]
+                    each serviceItem, index in serviceItems
+                        .service-page__item
+                            .service-page__item-main
+                                .item-main__name= serviceItem.name
+                                .item-main__seo
+                                    p Короткое описания события, основные яркие моменты, преимущества, текст полезный для seo. Короткое описания события, основные яркие моменты, преимущества, текст полезный для seo.
+                                .item-main__aspects
+                                    p Ключевой аспект
+                                    p Ключевой аспект
+                                    p Ключевой аспект
+                                    p Ключевой аспект
+                                    p Ключевой аспект
+                                a(href='javascript:void(0)' data-fancybox data-src='#popupRequest').btn Заказать
+                            .service-page__item-image
+                                +img(`service-image-${index + 1}.jpg`)

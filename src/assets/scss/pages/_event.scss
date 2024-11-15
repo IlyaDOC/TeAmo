@@ -1,0 +1,103 @@
+.event-page {
+
+  &__inner {
+    display: grid;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @include breakpoint(lg) {
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 90px;
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+    margin-bottom: 16px;
+
+    @include breakpoint(xl) {
+      font-size: 16px;
+    }
+  }
+
+  &__about {
+    font-size: 16px;
+    line-height: 110%; /* 17.6px */
+    margin-bottom: 24px;
+
+    @include breakpoint(lg) {
+      font-size: 40px;
+      margin-bottom: 30px;
+      @include columCountMaxWidth(8);
+    }
+
+    @include breakpoint(xl) {
+      @include columnXlWidth(6);
+    }
+  }
+
+  &__place {
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+    margin-bottom: 30px;
+
+    @include breakpoint(lg) {
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__seo-text {
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+
+    @include breakpoint(lg) {
+      font-size: 18px;
+      @include columCountMaxWidth(8);
+    }
+
+    @include breakpoint(xl) {
+      @include columnXlWidth(5);
+    }
+  }
+
+  &__images {
+    margin-top: 50px;
+    display: grid;
+    gap: 10px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 80px;
+    }
+
+    .event-page__image {
+      width: 100%;
+      height: calc((100vw - var(--container) * 2) * 0.765625);
+      cursor: zoom-in;
+
+      @include breakpoint(lg) {
+        max-height: 300px;
+      }
+
+      @include breakpoint(xl) {
+        max-height: 450px;
+      }
+    }
+  }
+}

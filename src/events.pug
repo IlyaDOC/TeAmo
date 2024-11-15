@@ -1,0 +1,30 @@
+---
+title: 'Страница | События'
+bodyClass: events-page
+//yandexMap: true
+---
+
+extends includes/_page
+include components/_breadcrumbs
+block main
+    +breadcrumbs('', 'События')
+    section.events-page
+        .container
+            .events-page__inner
+                h1 События
+                .events-page__filter
+                    a(href='javascript:void(0)' data-type='all').filter__item Все
+                    a(href='javascript:void(0)' data-type='concerts').filter__item Концерты
+                    a(href='javascript:void(0)' data-type='performances').filter__item Спектакли
+                    a(href='javascript:void(0)' data-type='events').filter__item Мероприятия
+                    a(href='javascript:void(0)' data-type='news').filter__item Новости
+                    a(href='javascript:void(0)' data-type='announcements').filter__item Анонсы
+                    a(href='javascript:void(0)' data-type='charity').filter__item Благотворительность
+
+                .events-page__items
+                    - var n = 0;
+                    while n < 4
+                        include components/_event-item
+                        - n++;
+                a(href='javascript:void(0)').btn Показать еще
+

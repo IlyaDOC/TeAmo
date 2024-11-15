@@ -38,7 +38,6 @@ function headerActions() {
     if (headerMenuToggler) {
         headerMenuToggler.addEventListener('click', () => {
             headerMenuJs.classList.add('opened');
-            // header.style.backdropFilter = 'none';
             document.body.classList.add('overflow-hidden');
         });
     }
@@ -46,7 +45,6 @@ function headerActions() {
     if (headerClose) {
         headerClose.addEventListener('click', () => {
             headerMenuJs.classList.remove('opened');
-            // header.style.backdropFilter = 'blur(5px)';
             document.body.classList.remove('overflow-hidden');
         });
     }

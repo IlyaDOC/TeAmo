@@ -1,0 +1,70 @@
+.events-page {
+
+  &__inner {
+    display: grid;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @include breakpoint(lg) {
+      font-size: 40px;
+      margin-bottom: 90px;
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+    margin-bottom: 40px;
+
+    @include breakpoint(lg) {
+      font-size: 16px;
+      gap: 70px;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 70px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 80px;
+    }
+
+    @include breakpoint(xl) {
+      column-gap: 30px;
+      row-gap: 100px;
+    }
+  }
+
+  a.btn {
+    padding: 19px 74px;
+    margin-top: 40px;
+    justify-self: center;
+
+    @include breakpoint(lg) {
+      padding: 15px 21px;
+    }
+
+    @include breakpoint(lg) {
+      margin-top: 60px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.event-item {
+  &__image {
+    width: 100%;
+    height: calc((100vw - var(--container) * 2) * 0.8125);
+    margin-bottom: 18px;
+
+    @include breakpoint(lg) {
+      max-height: 299px;
+      margin-bottom: 26px;
+    }
+
+    @include breakpoint(xl) {
+      max-height: 450px;
+    }
+  }
+
+  &__type {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+    margin-bottom: 10px;
+
+    @include breakpoint(xl) {
+      margin-bottom: 14px;
+    }
+    
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+    margin-bottom: 20px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+  }
+
+  &__about {
+    line-height: 110%; /* 17.6px */
+    margin-bottom: 16px;
+
+    @include breakpoint(lg) {
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__place {
+    font-size: 14px;
+    line-height: 110%; /* 15.4px */
+  }
+}

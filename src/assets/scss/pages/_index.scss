@@ -1,3 +1,15 @@
+body.main-page {
+  margin-top: -120px;
+
+  @include breakpoint(lg) {
+    margin-top: -129px;
+  }
+
+  @include breakpoint(xl) {
+    margin-top: -158px;
+  }
+}
+
 .main {
   height: 600px;
 
@@ -73,7 +85,8 @@
       object-position: right;
 
       @include breakpoint(lg) {
-        object-position: bottom;
+        object-position: center;
+
       }
     }
   }
@@ -234,8 +247,8 @@
       }
 
       &-thumb-active {
+        border: 1px solid $pink;
         @include breakpoint(lg) {
-          border: 1px solid $pink;
           width: 140px;
           height: 200px;
         }
@@ -696,7 +709,6 @@
 }
 
 .gallery {
-  padding-bottom: 100px;
 
   &__inner {
     display: grid;

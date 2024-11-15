@@ -1,3 +1,63 @@
 .popup {
   display: none;
+  border-radius: 10px;
+  padding: 16px 16px 50px 16px;
+  max-width: 320px;
+}
+
+#popupRequest {
+  flex-direction: column;
+  align-items: center;
+  .popup__logo {
+    width: 144px;
+    height: 67px;
+    margin: 60px 0 40px;
+  }
+
+  .popup__title {
+    color: $black;
+    font-size: 18px;
+    line-height: 110%; /* 19.8px */
+    margin-bottom: 30px;
+  }
+
+  .popup__inputs {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  form {
+    display: grid;
+    text-align: center;
+  }
+
+  .popup__agree {
+    color: $gray-secondary;
+    font-size: 12px;
+    line-height: 110%; /* 13.2px */
+
+    a {
+      color: #222;
+      line-height: 110%;
+      text-decoration-line: underline;
+    }
+  }
+
+  .btn {
+    padding: 19px 94px;
+    justify-self: center;
+    margin-top: 40px;
+  }
+
+  .carousel__button.is-close {
+    top: 16px;
+    right: 16px;
+
+    svg {
+      filter: none;
+      path {
+        stroke: $black;
+      }
+    }
+  }
 }

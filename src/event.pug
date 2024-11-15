@@ -1,0 +1,25 @@
+---
+title: 'Страница | Музыкальный спектакль'
+bodyClass: event-page
+//yandexMap: true
+---
+
+extends includes/_page
+include components/_breadcrumbs
+block main
+    +breadcrumbs('', 'События', 'Музыкальный спектакль')
+    section.event-page
+        .container
+            .event-page__inner
+                h1 Музыкальный спектакль
+                .event-page__date 21 октября 2024
+                .event-page__about Музыкальный спектакль об истории настоящей любви в трех действиях
+                .event-page__place Концертный зал “Зарядье”
+                .event-page__seo-text
+                    p Короткое описания события, основные яркие моменты, преимущества, текст полезный для seo. Короткое описания события, основные яркие моменты, преимущества, текст полезный для seo.
+                .event-page__images
+                    - var n = 0;
+                    while n < 10
+                        .event-page__image(data-fancybox data-src='assets/images/default-image.jpg')
+                            +img('default-image.jpg')
+                        - n++;
